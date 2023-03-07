@@ -21,8 +21,39 @@ body{
     position: relative;
     width: 216px;
     height: 31%;
-    background-color: aqua;
+
+    animation: moveright 1s linear forwards;
+    opacity: 0;
 }
+@keyframes moveright {
+    0%{
+        opacity: 1;
+        transform: translateX(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.container:nth-child(1){
+    animation-delay: 0s;
+}
+.container:nth-child(2){
+    animation-delay: 0.5s;
+}
+.container:nth-child(3){
+    animation-delay: 1s;
+}
+.container:nth-child(4){
+    animation-delay: 1.5s;
+}
+.container:nth-child(5){
+    animation-delay: 2s;
+}
+.container:nth-child(6){
+    animation-delay: 2.2s;
+}
+
 .textbox{
     padding: 8px 31px;
     background-color: aliceblue;
@@ -56,5 +87,39 @@ body{
     height: 7px;
     top: 227px;
     left: 0%;
-    margin-left: -5px;
+    margin-left: -310px;
+    z-index: -1;
+
+    animation: moveline 2s linear forwards;
+}
+@keyframes moveline {
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+.top-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 188px;
+    z-index: -1;
+    border-top: 15px solid red;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    right: 128px;
+}
+.bottom-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: -14px;
+    z-index: -1;
+    border-bottom: 15px solid red;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    right: 128px;
 }
