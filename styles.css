@@ -9,14 +9,19 @@ body{
 }
 .timeline-horizontal{
     position: relative;
-    max-width: 1024px;
-    margin: 100px auto;
+    display: flex;
+    height: 500px;
+    margin: 16px;
+
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
 }
 .container{
-    padding: 10px 50px;
+    padding: 10px 10px;
     background-color: antiquewhite;
     position: relative;
-    width: 50%;
+    width: 205px;
+    height: 41%;
 }
 .textbox{
     padding: 20px 30px;
@@ -24,4 +29,11 @@ body{
     position: relative;
     border-radius: 8px;
     font-size: 15px;
+}
+.top-container{
+    top: 0;
+}
+.bottom-container{
+    top: 41%;
+    padding-top: 23px;
 }
